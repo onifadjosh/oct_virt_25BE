@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h1>We are inside an ejs file</h1>
+
+    
+    
+    <% if (gender=='female') { %>
+        <h1>This user is a <%= gender %></h1>
+   
+  <% } %>
+
+
+  <% if (gender== 'female') { %>
+    <h1>This user is a <%= gender %></h1>
+  <% }else{ %>
+
+    <h1>This user is a <%= gender %></h1>
+
+  <% }%>
+
+
+    
+
+  <div class="d-flex gap-3 flex-wrap">
+    <% user.forEach((student, i) => { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= student.fullname %></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary"><%= student.Address %></h6>
+              <p class="card-text"><%= student.course %></p>
+              <div>
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Edit</button>
+              </div>
+            
+            </div>
+          </div>
+    <% }) %>
+
+    <div class="d-flex gap-3 flex-wrap">
+        <% for( let i = 0; i < user.length; i++ ) { %>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><%= user[i].fullname %></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary"><%= user[i].Address %></h6>
+                  <p class="card-text"><%= user[i].course %></p>
+                  <div>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary">Edit</button>
+                  </div>
+                
+                </div>
+              </div>    
+        <% } %>
+    </div>
+  </div>
+
+
+ 
+   
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

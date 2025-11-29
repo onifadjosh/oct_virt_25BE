@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="container-md ">
+    <form action="/register" method="post" class="mt-5 d-flex flex-column">
+        <p class="text-success"><%= message %></p>
+        <h1 class="font-monospace ">REGISTER HERE :</h1>
+
+        <input type="text" placeholder="fullname" name="fullname" class="w-25 p-2"> <br>
+        <input type="text" placeholder="email" name="email" class="w-25 p-2"> <br>
+        <input type="text" placeholder="password" name="password" class="w-25 p-2"> <br>
+
+        <input type="text" placeholder="country" name="country" class="w-25 p-2" class="w-25">   <br>
+         <input type="text" placeholder="course" name="course" class="w-25 p-2"><br>
+         <input type="text" placeholder="hobby" name="hobby" class="w-25 p-2"><br>
+
+         <button class="btn btn-success w-25">Submit</button>
+    </form>
+
+
+    <a class="btn btn-success mt-4" href="/displayUser">Display All Users</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
